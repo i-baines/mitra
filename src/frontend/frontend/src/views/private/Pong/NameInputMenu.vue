@@ -1,6 +1,6 @@
 <template>
     <div class="form-container">
-      <NavHome />
+
       <div class="form-content">
         <h2 class="title">Play Menu</h2>
         <form @submit.prevent="startGame" class="game-form">
@@ -163,7 +163,7 @@
                 ></span>
                 {{ user.name }}
               </span>
-              <span class="badge bg-primary rounded-pill">{{ user.wins }}</span>
+              <span class="badge bg-primary rounded-pill"></span>
             </li>
           </ul>
         </div>
@@ -177,6 +177,7 @@ import { onMounted, ref, computed, inject } from 'vue';
 import type Api from '@/utils/Api/Api'
 import auth from '../../../services/user/services/auth/auth.ts'
 import img1 from '../../../assets/avatars/trofeo.png';
+
 
 const api: Api = inject('$api') as Api
 const Auth: auth = new auth(api)
@@ -363,6 +364,7 @@ const startGame = () => {
 
 .title {
   text-align: center;
+  font-family: Titulo, sans-serif;
   margin-bottom: 20px;
 }
 
@@ -403,8 +405,9 @@ const startGame = () => {
 .leaderboard-title {
   text-align: center;
   margin-bottom: 20px;
-  color: #ff3974; /* Color del título */
-  font-size: 1.5em; /* Tamaño de fuente del título */
+  font-family: Titulo, sans-serif;
+  color: #ff3974;
+  font-size: 1.5em;
 }
 
 .list-group {

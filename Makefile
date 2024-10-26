@@ -1,6 +1,6 @@
 NAME = ft_transcendence
 
-DOCKER = sudo docker
+DOCKER = docker
 
 # Variables
 DOCKER_COMPOSE_LINUX = $(DOCKER) compose
@@ -61,7 +61,7 @@ clean:
 	@$(DOCKER) rmi -f $(DOCKER_IMAGES_BACKEND)
 	@$(DOCKER) rmi -f $(DOCKER_IMAGES_METRICS)
 	rm -rf networks
-	sudo rm -rf volumes/
+	rm -rf volumes/
 	@$(DOCKER) network prune --force
 	@$(DOCKER) image prune --force
 fclean: down clean

@@ -3,7 +3,6 @@
     <NavHome />
   </div>
   <section class="info-section row flex-row-nowrap">
-    <!-- Tarjeta de Amigos -->
     <div class="info-card d-flex flex-column justify-content-center col-md-6 col-sm-12">
       <h2 class="pt-2">Friends List</h2>
       <div class="card-content">
@@ -227,7 +226,6 @@ const declineFriendRequest = async (requestId: number) => {
 </script>
 
 <style scoped>
-/* Estilo para mantener las tarjetas alineadas horizontalmente */
 .info-section {
   display: flex;
   justify-content: space-between;
@@ -246,10 +244,10 @@ const declineFriendRequest = async (requestId: number) => {
   padding: 1.3em;
   border-radius: 10px;
   margin: 0.8em;
-  font-family: Titulo, sans-serif;
+font-family: Titulo, sans-serif;
   box-shadow: -4px 4px 10px rgba(249, 36, 100, 0.8);
-  min-width: 300px; /* Ajusta el ancho mínimo para pantallas pequeñas */
-  flex: 0 0 45%; /* Hace que cada tarjeta ocupe un 45% del ancho del contenedor */
+  min-width: 400px;
+  flex: 0 0 45%;
 }
 
 .card-content {
@@ -266,7 +264,7 @@ const declineFriendRequest = async (requestId: number) => {
   margin-right: 8px;
 }
 
-.friends-list, .search-friend {
+.search-friend {
   list-style: none;
   padding: 0;
 }
